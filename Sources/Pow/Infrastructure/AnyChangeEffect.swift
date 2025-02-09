@@ -41,7 +41,7 @@ extension AnyChangeEffect {
         )
     }
 
-    static func simulation<Modifier: ViewModifier & Simulative>(_ makeModifier: @escaping (Int) -> Modifier) -> AnyChangeEffect {
+    public static func simulation<Modifier: ViewModifier & Simulative>(_ makeModifier: @escaping (Int) -> Modifier) -> AnyChangeEffect {
         AnyChangeEffect(modifier: { change in
             makeModifier(change).eraseToAnyViewModifier()
         }, animation: nil, cooldown: 0.0)
