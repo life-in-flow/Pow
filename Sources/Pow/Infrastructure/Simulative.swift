@@ -1,6 +1,6 @@
 import SwiftUI
 
-protocol Simulative {
+public protocol Simulative {
     var impulseCount: Int { get set }
 
     var initialVelocity: CGFloat { get set }
